@@ -10,7 +10,7 @@ typedef struct n{
 typedef struct q{
     node *front,*rear;
 }queue;
-void display(queue *temp){
+void displayq(queue *temp){
     node *d = NULL;
     if(temp != NULL)
         d = temp->front;
@@ -20,7 +20,6 @@ void display(queue *temp){
     }
 }
 void enqueue(queue **head, int n){
-    int n;
     queue *temp = *head,*newnode = NULL;
     newnode = (queue*)malloc(sizeof(queue));
     newnode->rear = (node*)malloc(sizeof(node));
