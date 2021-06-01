@@ -11,7 +11,7 @@ typedef struct q{
     node *front,*rear;
 }queue;
 int isEmpty(queue q){
-    if(q==NULL)
+    if(q*==NULL)
         return 1;
     return 0;
 }
