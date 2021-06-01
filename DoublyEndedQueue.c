@@ -120,4 +120,5 @@ int main(){
             display(q7);
         }
     }
+    return 0;
 }
