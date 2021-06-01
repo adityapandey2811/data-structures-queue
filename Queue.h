@@ -10,6 +10,18 @@ typedef struct n{
 typedef struct q{
     node *front,*rear;
 }queue;
+int isEmpty(queue q){
+    if(q==NULL)
+        return 1;
+    return 0;
+}
+int isFull(){
+    queue *temp = NULL;
+    temp = (queue*)malloc(sizeof(queue));
+    if(temp == NULL)
+        return 1;
+    return 0;
+}
 void displayq(queue *temp){
     node *d = NULL;
     if(temp != NULL)
