@@ -1,5 +1,5 @@
-#ifndef queue_h
-#define queue_h
+#ifndef q_h
+#define q_h
 
 #include<stdio.h>
 #include<stdlib.h>
@@ -10,12 +10,20 @@ typedef struct n{
 typedef struct q{
     node *front,*rear;
 }queue;
-int isEmpty(queue q){
-    if(q*==NULL)
+int size(queue *q){
+    node *temp;
+    int i = 0;
+    if(q == NULL)
+        return 0;
+    for(temp = q->front;temp != NULL; temp = temp->next, i++);
+    return i;
+}
+int isEmptyq(queue *q){
+    if(q==NULL)
         return 1;
     return 0;
 }
-int isFull(){
+int isFullq(){
     queue *temp = NULL;
     temp = (queue*)malloc(sizeof(queue));
     if(temp == NULL)
